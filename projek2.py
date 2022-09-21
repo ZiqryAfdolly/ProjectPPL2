@@ -22,6 +22,7 @@ def show_buku():
 
 # fungsi untuk edit buku
 def edit_buku():
+    garis()
     show_buku()
     indeks = int(input("Inputkan ID Buku : "))
     if indeks > len(buku):
@@ -32,7 +33,6 @@ def edit_buku():
         buku[indeks] = judul_baru 
         garis2()
         print("Buku berhasil dirubah!")
-        show_buku()
         garis()   
 
 # funsi insert buku
@@ -52,9 +52,7 @@ def delete_buku():
         print ("ID SALAH")
     else:
         buku.remove(buku[indeks])
-        garis()
         print ("Buku berhasil dihapus!")    
-        garis2()
 #Menu untuk tampilan perpus
 def show_menu():
     print("\n")
